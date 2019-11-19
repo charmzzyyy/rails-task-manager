@@ -1,15 +1,15 @@
 <%= form_for(task) do |f| %>
-  <%= f.label :Title %>
+  <%= f.label :Title, :class=>'title_form' %>
   <%= f.text_field :title %>
 
   <%= f.label :Details %>
   <%= f.text_field :details %>
 
 <% if task.persisted? %>
-  <%= f.label :completed %>
+  <%= f.label :Is_this_completed? %>
   <%= f.check_box :completed %>
   <% end %>
 
-  <%= f.submit %>
+  <%= f.submit :class => 'btn-primary' %>
 
 <% end %>
