@@ -7,6 +7,7 @@
   <%= link_to task_path(task) do %>
         <%= task.title %>
       <% end %>
+      <%= link_to 'Delete', task_path(task), method: :delete %>
 <% end %>
 </ul>
 
